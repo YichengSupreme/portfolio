@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Mind Map - Andy Su</title>
+    <meta name="description" content="Present project: 3D Mind Map - Interactive 3D visualization of cognitive processes">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1a202c;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .project-hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .project-overview {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .project-section {
+            margin-bottom: 4rem;
+        }
+        
+        .project-section h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .project-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .tech-item h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .image-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-placeholder {
+            background: #e2e8f0;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-family: 'JetBrains Mono', monospace;
+            border: 2px dashed #cbd5e0;
+        }
+        
+        .image-placeholder p {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .image-caption {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .image-caption h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .image-caption p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .back-to-projects {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+        }
+        
+        .back-to-projects .btn {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tech-stack-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <h1>3D Mind Map</h1>
+            <p>Interactive 3D visualization of cognitive processes and neural pathways</p>
+        </section>
+
+        <section class="project-overview">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        [Your project description here - explain the concept, goals, and vision for the 3D Mind Map project]
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-stack-grid">
+                        <div class="tech-item">
+                            <h4>[Tech 1]</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>[Tech 2]</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>[Tech 3]</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>[Tech 4]</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Visualizations & Prototypes</h2>
+                    <div class="image-gallery">
+                        <div class="image-item">
+                            <div class="image-placeholder">
+                                <p>Insert 3D Mind Map visualization here</p>
+                            </div>
+                            <div class="image-caption">
+                                <h4>3D Mind Map Interface</h4>
+                                <p>Main interface showing the interactive 3D visualization of cognitive processes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="image-item">
+                            <div class="image-placeholder">
+                                <p>Insert neural pathway visualization here</p>
+                            </div>
+                            <div class="image-caption">
+                                <h4>Neural Pathway Mapping</h4>
+                                <p>Visualization of how different cognitive processes connect and interact</p>
+                            </div>
+                        </div>
+                        
+                        <div class="image-item">
+                            <div class="image-placeholder">
+                                <p>Insert user interaction demo here</p>
+                            </div>
+                            <div class="image-caption">
+                                <h4>User Interaction Demo</h4>
+                                <p>Demonstration of how users can navigate and interact with the 3D mind map</p>
+                            </div>
+                        </div>
+                        
+                        <div class="image-item">
+                            <div class="image-placeholder">
+                                <p>Insert additional prototype here</p>
+                            </div>
+                            <div class="image-caption">
+                                <h4>Additional Prototype</h4>
+                                <p>Other visualizations or prototypes from your 3D Mind Map project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-projects">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-outline">Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../index.html#home">Home</a>
+                    <a href="../projects.html">Projects</a>
+                    <a href="../index.html#skills">Skills</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

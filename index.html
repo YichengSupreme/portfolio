@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Su - Personal Website</title>
+    <meta name="description" content="Andy Su's personal website showcasing projects, skills, and experience">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .project-content h3 {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-left: 2rem;">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Yicheng Su</h1>
+                <p class="hero-subtitle">Biochemist, aspiring neuroscientist</p>
+                <p class="hero-description">
+                    I am in the final year of my integrated Master’s in Biochemistry at the University of Oxford. My biochemistry training has given me a strong appreciation for chemical signals and their role in biological systems. 
+                    Alongside this, I have built a growing computational skill set through bioinformatics and machine learning. Looking ahead, I am eager to deepen my understanding of electrical signals, which I see as highly complementary to chemical and computational perspectives. 
+                    By bringing these three dimensions together, I aim to develop new tools and frameworks for decoding memory, emotion, and other aspects of human experience.
+                    My curiosity spans memory, sleep, dreams, and emotions, as well as how altered states — including those induced by psychedelics — reshape the brain’s activity and perception.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Projects </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Check out my projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Investigating drug synergy in acute myeloid leukaemia</h3>
+                            <p>During my research in Professor Yang Shi's lab at Oxford, I work closely with Dr. Qianpeng Li, applying computational approaches to integrate public cancer datasets with experimental data.</p>
+                            <div class="project-tech">
+                                <span>R</span>
+                                <span>Wetlab</span>
+                                <span>Python</span>
+                                <span>JavaScript</span>
+                                <span>SQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/project-1.html" class="btn btn-small">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Benchmark study for emotion recognition from multimodal neurophysiological data</h3>
+                            <p>Assessing the ability of current machine learning models to predict emotions from EEG data, using this project as a bridge from biochemistry into neuroscience.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>EEG Analysis</span>
+                                <span>Signal Processing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/project-2.html" class="btn btn-small">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta">
+                    <a href="projects.html" class="btn btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Interests</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3> Wetlab</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">EC50</span>
+                            <span class="skill-item">Cell culture</span>
+                            <span class="skill-item">Protocol design</span>
+                            <span class="skill-item">RT-PCR</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Drylab</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Omics analysis using public datasets</span>
+                            <span class="skill-item">Data visualisation</span>
+                            <span class="skill-item">Using WGCNA, Cox models, KM-curves for drug synergy discovery</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Others</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Flutter, JavaScript, Python (for app development)</span>
+                            <span class="skill-item">Building research tools with frontend and backend</span>
+                            <span class="skill-item">Machine learning (python)</span>
+                            <span class="skill-item">Learning new skills</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Interests outside academics</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"> Rowing, basketball, tennis, running</span>
+                            <span class="skill-item">Photography</span>
+                            <span class="skill-item">Weiqi (Go)</span>
+                            <span class="skill-item">Making things</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's work together!</h3>
+                        <p>
+                            I'm always interested in new opportunities and exciting projects. 
+                            Whether you have a question or just want to say hi, feel free to reach out.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>yicheng.su@oriel.ox.ac.uk</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/YichengSupreme</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <span>linkedin.com/in/yicheng-su-34567890</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

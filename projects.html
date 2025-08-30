@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Andy Su</title>
+    <meta name="description" content="View Andy Su's portfolio of projects and work">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Projects page specific styles */
+        .projects-hero {
+            background: #ffffff;
+            color: #1a1a1a;
+            text-align: left;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .projects-hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 400;
+        }
+        
+        .projects-hero p {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.7;
+            min-height: 2.4em;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: #666;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .filter-section {
+            padding: 3rem 0;
+            background: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-btn {
+            font-family: 'JetBrains Mono', monospace;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #ddd;
+            background: white;
+            color: #4a4a4a;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+        
+        .projects-container {
+            padding: 4rem 0;
+        }
+        
+        .project-item {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 4rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .project-item:hover {
+            border-color: #ddd;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f0f0f0 0%, #ddd 50%, #f0f0f0 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-item:hover::before {
+            opacity: 1;
+        }
+        
+        .project-header {
+            padding: 3rem;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+        }
+        
+        .project-info h3 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 1.3;
+        }
+        
+        .project-info p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-tag {
+            background: #f8f8f8;
+            color: #666;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+            transform: translateY(-1px);
+        }
+        
+        .timeline-tag {
+            font-family: 'JetBrains Mono', monospace;
+            display: block;
+            padding: 0.4rem 0;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1rem;
+            margin-left: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-tag.past {
+            color: #AFC8DC;
+        }
+        
+        .timeline-tag.present {
+            color: #C7DCC5;
+        }
+        
+        .timeline-tag.future {
+            color: #D7C6E9;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 1px solid transparent;
+        }
+        
+        .btn-primary {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+            border-color: #333;
+            transform: translateY(-1px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #1a1a1a;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #333;
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p id="typing-text">A collection of my work, including things I've worked on, things I'm working on now, and things I'm looking forward to doing in the future.</p>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="past">Past</button>
+                    <button class="filter-btn" data-filter="present">Present</button>
+                    <button class="filter-btn" data-filter="future">Future</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-container">
+            <div class="container">
+                <div class="project-item" data-category="present">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag present">Present</span>
+                            <h3>Investigating drug synergy in acute myeloid leukaemia</h3>
+                            <p>During my research in Professor Yang Shi's lab at Oxford, I work closely with Dr. Qianpeng Li, applying computational approaches to integrate public cancer datasets (such as DepMap and BeatAML) with experimental data. 
+                                This experience has strengthened my skills in R, large-scale data analysis, and the study of drug mechanisms in AML. 
+                                I have also designed and executed protocols to calculate EC₅₀ values, and begun developing a prototype drug synergy database for cancer, for which I built the frontend and backend wrappers. 
+                                Although the project is ongoing, this work has given me the opportunity to contribute to a foundation that could support impactful research in the future.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Wetlab</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/project-1.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="present">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag present">Present</span>
+                            <h3>Benchmark study for emotion recognition from multimodal neurophysiological data</h3>
+                            <p>As the first step toward my long-term initiative, the Memory Recorder (see Projects: Future), I set out to assess the ability of current machine learning models to predict emotions from EEG data, using this project as a bridge from biochemistry into neuroscience. While working with the DREAMER dataset, I found that the task is more challenging than some published studies suggest, which led me to reframe the project into a benchmark study. 
+                                I am now comparing the predictive power of EEG, ECG, and combined EEG–ECG data under sample-independent, sample-dependent, and few-shot conditions, and I plan to validate my pipeline on an independent dataset such as SEED. 
+                                This work has given me practical experience in signal preprocessing, feature extraction, and model evaluation, and lays the foundation for future efforts in real-time emotional state decoding.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">EEG Analysis</span>
+                                <span class="tech-tag">Signal Processing</span>
+                                <span class="tech-tag">Data Science</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/project-2.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="future">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag future">Future</span>
+                            <h3>Memory Recorder</h3>
+                            <p>The Memory Recorder is my long-term initiative to explore how neural signals and computational models might one day allow us to capture and revisit aspects of lived experience. 
+                                While highly exploratory, it guides my present work in EEG emotion decoding and reflects my broader goal of building tools to study memory, sleep, dreams, and emotion.</p>
+                            <div class="project-links">
+                                <a href="projects/memoryrecorder.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="future">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag future">Future</span>
+                            <h3>Dream Decoding</h3>
+                            <p>Inspired by my own dream experiences and Adam Haar Horowitz’s Dormio device, I am exploring dream decoding as a way to treat nightmares, trauma, and memory consolidation. 
+                                In the long term, I hope to contribute to decoding the “language” of dreams, explore its novel applications, and to critically examine the ethical implications of dream engineering.</p>
+                            <div class="project-links">
+                                <a href="projects/dreamdecoding.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="past">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag past">Past</span>
+                            <h3>Pikkr</h3>
+                            <p>A minimal decision-making app built in Flutter with random selection. I am experimenting with adaptive algorithms such as multi-armed bandits and lightweight LSTMs to incorporate preference learning in future versions.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">LSTMs</span>
+                                <span class="tech-tag">Multi-armed Bandits</span>
+                                <span class="tech-tag">Preference Learning</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/pikkr.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="present">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="timeline-tag present">Present</span>
+                            <h3>3D Mind Map</h3>
+                            <p>A 3D mind mapping tool that lets ideas be explored in higher-dimensional space. 
+                                Inspired by the complexity of biochemical pathways, it reflects my interest in building computational tools for visualizing knowledge systems.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">WebGL</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/3dmindmap.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="index.html#skills">Skills</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing animation for the description text
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    // Add blinking cursor at the end
+                    element.innerHTML += '<span class="typing-cursor"></span>';
+                }
+            }
+            
+            type();
+        }
+
+        // Start typing animation when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const typingText = document.getElementById('typing-text');
+            const fullText = typingText.textContent;
+            
+            // Start the typing animation after a short delay
+            setTimeout(() => {
+                typeWriter(typingText, fullText, 30);
+            }, 1000);
+        });
+
+        // Project filtering functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add fadeIn animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

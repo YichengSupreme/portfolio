@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikkr - Andy Su</title>
+    <meta name="description" content="A minimal decision-making app built in Flutter with random selection and adaptive algorithms">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1a202c;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .project-hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .project-overview {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .project-section {
+            margin-bottom: 4rem;
+        }
+        
+        .project-section h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .project-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .tech-item h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .media-placeholder {
+            background: #e2e8f0;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            color: #64748b;
+            font-family: 'JetBrains Mono', monospace;
+            border: 2px dashed #cbd5e0;
+        }
+        
+        .media-placeholder p {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .back-to-projects {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+        }
+        
+        .back-to-projects .btn {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tech-stack-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <h1>Pikkr</h1>
+            <p>A minimal decision-making app with adaptive preference learning</p>
+        </section>
+
+        <section class="project-overview">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Pikkr is a lightweight decision-making app on iOS App Store I built to explore simple tools for reducing decision fatigue. The idea was inspired by a very practical challenge — not always knowing what to eat each day — which led me to design a system that could make small, repeated decisions easier. The current version allows users to create option decks and perform randomized selection, implemented in Flutter for cross-platform use. Alongside this, I have begun testing adaptive algorithms — including a multi-armed bandit framework and the potential for lightweight LSTM integration — to enable the app to learn from user preferences over time.
+<br>
+<br>
+                    Though I still have plans to implement more advanced features, Pikkr has given me hands-on experience in mobile app design, probabilistic reasoning. It also sparked my interest in human–computer interaction, by showing me how even small algorithmic choices can influence user decision-making. 
+<br>
+<br>
+                    While Pikkr was valuable as a first coding project and has great sentimental value, I eventually recognized its limitations. For trivial, low-stakes choices, people can simply pick at random without an app or ask a friend; for meaningful decisions, they tend to seek informed suggestions grounded in evidence or expert systems rather than a simple preference-weighted algorithm. This left Pikkr in an awkward middle ground — neither playful enough to be essential for casual use, nor robust enough to guide serious decisions. Reflecting on this helped me sharpen my judgment about what constitutes a “real problem,” and guided me to focus on projects with greater scientific and practical impact.                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-stack-grid">
+                        <div class="tech-item">
+                            <h4>Flutter</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>UI/UX Design</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>LSTMs</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Multi-armed Bandits</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Preference Learning</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2>App Screenshots & Demo</h2>
+                    <div class="media-placeholder">
+                        <p>Insert your app screenshots or demo videos here</p>
+                    </div>
+                    <div class="media-placeholder">
+                        <p>Insert additional app interface or functionality images here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-projects">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-outline">Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../index.html#home">Home</a>
+                    <a href="../projects.html">Projects</a>
+                    <a href="../index.html#skills">Skills</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
