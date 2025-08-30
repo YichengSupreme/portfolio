@@ -28,7 +28,7 @@ PersonalWebsite/
 │   ├── img/                 # Image files
 │   └── video/               # Video files 
 └── projects/                # Individual project pages
-    ├── project-1.html       
-    └── project-2.html      
+    ├── aml.html       
+    └── eegmood.html      
 ```
 

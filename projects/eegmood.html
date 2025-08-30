@@ -163,6 +163,8 @@
                         While working with the DREAMER dataset, I found that the task is more challenging than some 
                         published studies suggest, which led me to reframe the project into a benchmark study.
                     </p>
+                    <p>Current EEG emotion recognition papers often report inflated accuracies due to data leakage or subject-dependent splits. 
+                        My benchmark explicitly controls for these issues, providing a more realistic baseline.</p>
                 </div>
 
                 <div class="project-section">
@@ -183,6 +185,12 @@
                         <div class="tech-item">
                             <h4>Data Science</h4>
                         </div>
+                        <div class="tech-item">
+                            <h4>MNE</h4>
+                        </div>
+                        <div class="tech-item">
+                            <h4> Constructing leak-proof ML pipeline </h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,55 +202,53 @@
                     <h2>Research Approach</h2>
                     <p>
                         I am now comparing the predictive power of EEG, ECG, and combined EEG–ECG data under 
-                        sample-independent, sample-dependent, and few-shot conditions, and I plan to validate 
-                        my pipeline on an independent dataset such as SEED.
+                        sample-independent, sample-dependent, and few-shot conditions using traditional ML models Random Forest and Gradient Boosting, and I plan to validate 
+                        my pipeline on an independent dataset such as SEED. Furthermore, I benchmark how accuracy varies across different conditions of data leakage and how each will affect model performance.
                     </p>
                 </div>
 
                 <div class="project-section">
                     <h2>Methodology</h2>
                     <p>
-                        [Your specific methodology for the benchmark study]
+                        Including but not limited to:
+                        <br>
+                        <ul></ul>
+                            <li>EEG Preprocessing: filtering (0.5–45 Hz), artifact rejection, windowing into 30s segments.</li>
+                            <li>Feature extraction: power spectral density, differential entropy (and more) for EEG, HR features for ECG.</li>
+                            <li>Feature selection: correlation-based, select top-N features due to small sample size.</li>
+                            <li>Models tested: Random Forest, Gradient Boosting, MAML (few-shot).</li>
+                            <li>Evaluation: accuracy, F1, confusion matrices, subject-level CV.</li>
+                        </ul>
                     </p>
                 </div>
 
                 <div class="project-section">
-                    <h2>Data Analysis</h2>
+                    <h2>What I learnt</h2>
                     <p>
-                        [Description of your data analysis approach and techniques]
-                    </p>
-                </div>
-
-                <div class="project-section">
-                    <h2>Results & Visualizations</h2>
-                    <div class="media-placeholder">
-                        <p>Insert your EEG analysis results, charts, or graphs here</p>
-                    </div>
-                    <div class="media-placeholder">
-                        <p>Insert model performance comparisons or validation results here</p>
-                    </div>
-                </div>
-
-                <div class="project-section">
-                    <h2>Key Findings</h2>
-                    <p>
-                        This work has given me practical experience in signal preprocessing, feature extraction, 
-                        and model evaluation, and lays the foundation for future efforts in real-time emotional 
-                        state decoding.
-                    </p>
-                </div>
-
-                <div class="project-section">
-                    <h2>Challenges & Solutions</h2>
-                    <p>
-                        [Your specific challenges and how you addressed them]
+                   </ul>
+                        <li>Signal Preprocessing: Hands-on experience with EEG/ECG pipelines (filtering, artifact rejection, segmentation, feature extraction).</li>
+                        <br>
+                        <li>Machine Learning Pipelines: Designing full end-to-end pipelines, from raw biosignals to model evaluation, while preventing data leakage.</li>
+                        <br>
+                        <li> Independent Research in a New Field: Transitioning from biochemistry into computational neuroscience by self-teaching EEG analysis and ML methods.</li>
+                        <br>
+                        <li>Scientific Question Formulation: Learning to frame the right benchmarks and ask critical questions about why published results may not generalize.</li>
+                        <br>
+                        <li>Problem-Solving: Tackling challenges such as cross-subject variability, imbalanced data, and reproducibility.</li>
+                        <br>
+                        <li>Computational Research Skills: Gained fluency with Python and Git, and research documentation.</li>
+                        </ul>
                     </p>
                 </div>
 
                 <div class="project-section">
                     <h2>Future Directions</h2>
                     <p>
-                        [Next steps toward the Memory Recorder project and other future work]
+                        1. Validate on SEED.
+                        <br>
+                        2. Explore deep learning architectures (but probably need bigger datasets to reduce overfitting...)
+                        <br>
+                        3. Transition from offline to real-time decoding.
                     </p>
                 </div>
             </div>
