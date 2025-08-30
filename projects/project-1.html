@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drug Synergy in Acute Myeloid Leukaemia - Andy Su</title>
+    <meta name="robots" content="noindex,nofollow">
+    <title>Drug Synergy in Acute Myeloid Leukaemia - Yicheng Su</title>
     <meta name="description" content="Research project investigating drug synergy in acute myeloid leukaemia using computational approaches">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -103,6 +104,59 @@
             font-size: 0.9rem;
         }
         
+        /* Video Section Styling */
+        .video-section {
+            margin: 3rem 0;
+        }
+        
+        .video-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .video-item {
+            text-align: center;
+        }
+        
+        .video-item h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .project-video {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .video-caption {
+            font-family: 'JetBrains Mono', monospace;
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: center;
+            margin-top: 0.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        
         .back-to-projects {
             text-align: center;
             padding: 2rem 0;
@@ -121,7 +175,20 @@
             .tech-stack-grid {
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .project-video {
+                max-width: 100%;
+            }
+            
+
         }
+        
+
     </style>
 </head>
 <body>
@@ -198,11 +265,29 @@
             <div class="container">
                 <div class="project-section">
                     <h2>DrugSynergy Database</h2>
-                    <div class="media-placeholder">
-                        <p>Prototype interface for the DrugSynergy database. Current version functions as a wrapper for integrating datasets, with algorithmic modules under development.</p>
-                    </div>
-                    <div class="media-placeholder">
-                        <p>Insert additional results or analysis images here</p>
+                    <p>Prototype interface for the DrugSynergy database. Current version functions as a wrapper for integrating datasets, with algorithmic modules under development.</p>
+                    
+                    <div class="video-section">
+                        <h3>Database Demonstrations</h3>
+                        <div class="video-grid">
+                            <div class="video-item">
+                                <h4>Demo 1</h4>
+                                <video controls class="project-video" preload="metadata">
+                                    <source src="../assets/video/DrugDB1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-caption">Predicting drug synergy between two drugs with gene expression heatmap output</p>
+                            </div>
+                            
+                            <div class="video-item">
+                                <h4>Demo 2</h4>
+                                <video controls class="project-video" preload="metadata">
+                                    <source src="../assets/video/DrugDB2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="video-caption">Check GOI expression across Depmap cell lines</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -218,7 +303,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <p>&copy; 2025 Yicheng Su. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="../index.html#home">Home</a>
                     <a href="../projects.html">Projects</a>
@@ -230,5 +315,23 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        // Set video playback rate to 1.25x by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.project-video');
+            
+            videos.forEach(video => {
+                // Set playback rate to 1.25x when video metadata loads
+                video.addEventListener('loadedmetadata', function() {
+                    this.playbackRate = 1.25;
+                });
+                
+                // Also set it immediately if metadata is already loaded
+                if (video.readyState >= 1) {
+                    video.playbackRate = 1.25;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

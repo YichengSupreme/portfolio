@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikkr - Andy Su</title>
+    <meta name="robots" content="noindex,nofollow">
+    <title>Pikkr - Yicheng Su</title>
     <meta name="description" content="A minimal decision-making app built in Flutter with random selection and adaptive algorithms">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -85,6 +86,41 @@
             font-size: 0.9rem;
         }
         
+        .app-screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .screenshot-item {
+            text-align: center;
+        }
+        
+        .app-screenshot {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .app-screenshot:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .screenshot-caption {
+            font-family: 'JetBrains Mono', monospace;
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
         .media-placeholder {
             background: #e2e8f0;
             height: 300px;
@@ -120,6 +156,15 @@
             
             .tech-stack-grid {
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+            
+            .app-screenshots {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .app-screenshot {
+                max-width: 100%;
             }
         }
     </style>
@@ -190,11 +235,15 @@
             <div class="container">
                 <div class="project-section">
                     <h2>App Screenshots & Demo</h2>
-                    <div class="media-placeholder">
-                        <p>Insert your app screenshots or demo videos here</p>
-                    </div>
-                    <div class="media-placeholder">
-                        <p>Insert additional app interface or functionality images here</p>
+                    <div class="app-screenshots">
+                        <div class="screenshot-item">
+                            <img src="../assets/img/Pikkr1.jpeg" alt="Pikkr App Advertisement" class="app-screenshot">
+                            <p class="screenshot-caption">Pikkr first going live</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../assets/img/Pikkr2.jpg" alt="Pikkr App Store Page" class="app-screenshot">
+                            <p class="screenshot-caption">Pikkr App Store page</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,7 +259,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <p>&copy; 2025 Yicheng Su. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="../index.html#home">Home</a>
                     <a href="../projects.html">Projects</a>

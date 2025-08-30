@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Mind Map - Andy Su</title>
+    <meta name="robots" content="noindex,nofollow">
+    <title>3D Mind Map - Yicheng Su</title>
     <meta name="description" content="Present project: 3D Mind Map - Interactive 3D visualization of cognitive processes">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -93,26 +94,22 @@
         }
         
         .image-item {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .image-placeholder {
-            background: #e2e8f0;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-family: 'JetBrains Mono', monospace;
-            border: 2px dashed #cbd5e0;
-        }
-        
-        .image-placeholder p {
             text-align: center;
-            font-size: 0.9rem;
+        }
+        
+        .project-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .project-image:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
         
         .image-caption {
@@ -180,7 +177,7 @@
     <main>
         <section class="project-hero">
             <h1>3D Mind Map</h1>
-            <p>Interactive 3D visualization of cognitive processes and neural pathways</p>
+            <p>Interactive 3D visualization map</p>
         </section>
 
         <section class="project-overview">
@@ -188,7 +185,10 @@
                 <div class="project-section">
                     <h2>Project Overview</h2>
                     <p>
-                        [Your project description here - explain the concept, goals, and vision for the 3D Mind Map project]
+                        I am developing a 3D mind mapping application to visualize and navigate complex relationships between ideas. Unlike traditional note-taking tools, this system allows information to be arranged in an infinite 3D space and then sliced into 2D views for focused exploration. My motivation came from biochemistry, where understanding requires mapping interconnected pathways and proteins, but I believe the same approach can support any field that relies on recognizing patterns across large networks of knowledge. Importantly, our thoughts themselves are not two-dimensional, and I want to create tools that better reflect this richness.
+<br>
+<br>
+                        Building this tool has allowed me to experiment with database design, 3D visualization, and user interaction. In the longer term, I aim to incorporate it into VR, so that users can be immersed in their own knowledge graphs. I see this project as a step toward more immersive ways of capturing and exploring scientific knowledge — an interest I hope to expand through neuroscience and human–computer interaction.
                     </p>
                 </div>
 
@@ -196,16 +196,16 @@
                     <h2>Technology Stack</h2>
                     <div class="tech-stack-grid">
                         <div class="tech-item">
-                            <h4>[Tech 1]</h4>
+                            <h4>JavaScript</h4>
                         </div>
                         <div class="tech-item">
-                            <h4>[Tech 2]</h4>
+                            <h4>Three.js</h4>
                         </div>
                         <div class="tech-item">
-                            <h4>[Tech 3]</h4>
+                            <h4>WebGL</h4>
                         </div>
                         <div class="tech-item">
-                            <h4>[Tech 4]</h4>
+                            <h4>SQLite</h4>
                         </div>
                     </div>
                 </div>
@@ -218,42 +218,26 @@
                     <h2>Visualizations & Prototypes</h2>
                     <div class="image-gallery">
                         <div class="image-item">
-                            <div class="image-placeholder">
-                                <p>Insert 3D Mind Map visualization here</p>
-                            </div>
+                            <img src="../assets/img/Mindmap1.PNG" alt="3D Mind Map Interface" class="project-image">
                             <div class="image-caption">
                                 <h4>3D Mind Map Interface</h4>
-                                <p>Main interface showing the interactive 3D visualization of cognitive processes</p>
+                                <p>Main interface showing the interactive 3D visualization of a "Cell Death" map demo</p>
                             </div>
                         </div>
                         
                         <div class="image-item">
-                            <div class="image-placeholder">
-                                <p>Insert neural pathway visualization here</p>
-                            </div>
+                            <img src="../assets/img/Mindmap2.PNG" alt="Neural Pathway Mapping" class="project-image">
                             <div class="image-caption">
-                                <h4>Neural Pathway Mapping</h4>
-                                <p>Visualization of how different cognitive processes connect and interact</p>
+                                <h4>Label mode</h4>
+                                <p>Clarity of node labels</p>
                             </div>
                         </div>
                         
                         <div class="image-item">
-                            <div class="image-placeholder">
-                                <p>Insert user interaction demo here</p>
-                            </div>
+                            <img src="../assets/img/Mindmap3.PNG" alt="User Interaction Demo" class="project-image">
                             <div class="image-caption">
-                                <h4>User Interaction Demo</h4>
-                                <p>Demonstration of how users can navigate and interact with the 3D mind map</p>
-                            </div>
-                        </div>
-                        
-                        <div class="image-item">
-                            <div class="image-placeholder">
-                                <p>Insert additional prototype here</p>
-                            </div>
-                            <div class="image-caption">
-                                <h4>Additional Prototype</h4>
-                                <p>Other visualizations or prototypes from your 3D Mind Map project</p>
+                                <h4>Note taking feature</h4>
+                                <p>Users can take notes, add tags for filtering, and add references for each node (object) or edge (interaction) </p>
                             </div>
                         </div>
                     </div>
@@ -271,7 +255,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Andy Su. All rights reserved.</p>
+                <p>&copy; 2025 Yicheng Su. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="../index.html#home">Home</a>
                     <a href="../projects.html">Projects</a>
