@@ -812,9 +812,39 @@ p {
     }
 }
 
+/* Ongoing Text Styling */
+.ongoing-text {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.ongoing-text p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Responsive Ongoing Text */
+@media (max-width: 768px) {
+    .ongoing-text {
+        margin: 1.5rem 0;
+    }
+    
+    .ongoing-text p {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 480px) {
-    .profile-picture {
-        width: 120px;
-        height: 120px;
+    .ongoing-text {
+        margin: 1rem 0;
+    }
+    
+    .ongoing-text p {
+        font-size: 0.8rem;
     }
 }
