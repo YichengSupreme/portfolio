@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Thinkers - Yicheng Su</title>
+    <meta name="description" content="Computational modeling projects exploring philosophical questions about the parallels between biological and social systems">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1a202c;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .project-hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .project-overview {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .project-section {
+            margin-bottom: 4rem;
+        }
+        
+        .project-section h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tech-item h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .tech-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .ongoing-text {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+        
+        .ongoing-text p {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #64748b;
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+            }
+            
+            .tech-stack {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <h1>Thinkers</h1>
+                <p>Computational modeling to explore philosophical questions about biological and social systems</p>
+            </div>
+        </section>
+
+        <section class="project-overview">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Thinkers is a collection of mini-projects driven by the shared similarity I see between "cell and organism" and "individual and society." Through computational modeling, I explore some of my biggest philosophical questions about how complex systems emerge from simpler components.
+                    </p>
+                    
+                    <p>
+                        This project bridges my interests in biochemistry, neuroscience, and social dynamics, using mathematical frameworks to investigate patterns that appear across different scales of organization. Each mini-project tackles a specific question about emergence, adaptation, and the nature of collective behavior.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>Python</h4>
+                            <p>Computational modeling and simulation</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>NumPy/SciPy</h4>
+                            <p>Mathematical computations</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Matplotlib</h4>
+                            <p>Data visualization</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Agent-Based Modeling</h4>
+                            <p>Individual-based simulations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ongoing-text">
+            <p>Currently ongoing — check back for updates! (Last updated: 2025-10)</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yicheng Su. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>GuideForge - Yicheng Su</title>
+    <meta name="description" content="A modular pipeline for CRISPR gRNA design using UCSC Genome Browser and IDT CRISPR tools">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1a202c;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .project-hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        
+        .project-hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .project-overview {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .project-section {
+            margin-bottom: 4rem;
+        }
+        
+        .project-section h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tech-item h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .tech-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .ongoing-text {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+        
+        .ongoing-text p {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #64748b;
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+            }
+            
+            .tech-stack {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <h1>GuideForge</h1>
+                <p>A modular pipeline for CRISPR gRNA design automation</p>
+            </div>
+        </section>
+
+        <section class="project-overview">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        GuideForge is a modular pipeline for CRISPR gRNA choosing using UCSC Genome Browser and IDT (Integrated DNA Technologies) CRISPR tools. The pipeline supports group-specific gRNA design specifications through policy.yaml and produces a manifest log per run for reproducibility tracking.
+                    </p>
+                    
+                    <p>
+                        I developed this tool after observing friends performing CRISPR gRNA design tasks manually and monotonously. The pipeline includes a configurable PAM scanner supporting multiple PAM patterns and comprehensive quality control filtering to streamline the entire workflow.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="project-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>Python</h4>
+                            <p>Modular pipeline development</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Reverse API engineering</h4>
+                            <p>Using cookie</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>YAML Configuration</h4>
+                            <p>Policy-based specifications</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>PAM Scanner</h4>
+                            <p>Multiple PAM pattern support</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Quality Control</h4>
+                            <p>Comprehensive filtering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ongoing-text">
+            <p>Currently ongoing — check back for updates! (Last updated: 2025-10)</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yicheng Su. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
