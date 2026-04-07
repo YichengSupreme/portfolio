@@ -529,6 +529,19 @@ p {
     color: white;
 }
 
+.last-updated {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 0.02em;
+}
+
+.last-updated--light {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .container {

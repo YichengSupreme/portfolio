@@ -285,7 +285,6 @@
                     <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="past">Past</button>
                     <button class="filter-btn" data-filter="present">Present</button>
-                    <button class="filter-btn" data-filter="future">Future</button>
                 </div>
             </div>
         </section>
@@ -341,7 +340,7 @@
                         <div class="project-info">
                             <span class="timeline-tag present">Present</span>
                             <h3>Benchmark study for emotion recognition from multimodal neurophysiological data</h3>
-                            <p>As the first step toward my long-term initiative, the Memory Recorder (see Projects: Future), I set out to assess the ability of current machine learning models to predict emotions from EEG data, using this project as a bridge from biochemistry into neuroscience. While working with the DREAMER dataset, I found that the task is more challenging than some published studies suggest, which led me to reframe the project into a benchmark study. 
+                            <p>As the first step toward my long-term initiative, the Memory Recorder, I set out to assess the ability of current machine learning models to predict emotions from EEG data, using this project as a bridge from biochemistry into neuroscience. While working with the DREAMER dataset, I found that the task is more challenging than some published studies suggest, which led me to reframe the project into a benchmark study. 
                                 I am now comparing the predictive power of EEG, ECG, and combined EEG–ECG data under sample-independent, sample-dependent, and few-shot conditions, and I plan to validate my pipeline on an independent dataset such as SEED. 
                                 This work has given me practical experience in signal preprocessing, feature extraction, and model evaluation, and lays the foundation for future efforts in real-time emotional state decoding.</p>
                             <div class="project-tech-stack">
@@ -353,34 +352,6 @@
                             </div>
                             <div class="project-links">
                                 <a href="projects/eegmood.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item" data-category="future">
-                    <div class="project-header">
-                        <div class="project-info">
-                            <span class="timeline-tag future">Future</span>
-                            <h3>Memory Recorder</h3>
-                            <p>The Memory Recorder is my long-term initiative to explore how neural signals and computational models might one day allow us to capture and revisit aspects of lived experience. 
-                                While highly exploratory, it guides my present work in EEG emotion decoding and reflects my broader goal of building tools to study memory, sleep, dreams, and emotion.</p>
-                            <div class="project-links">
-                                <a href="projects/memoryrecorder.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item" data-category="future">
-                    <div class="project-header">
-                        <div class="project-info">
-                            <span class="timeline-tag future">Future</span>
-                            <h3>Dream Decoding</h3>
-                            <p>Inspired by my own dream experiences and Adam Haar Horowitz’s Dormio device, I am exploring dream decoding as a way to treat nightmares, trauma, and memory consolidation. 
-                                In the long term, I hope to contribute to decoding the “language” of dreams, explore its novel applications, and to critically examine the ethical implications of dream engineering.</p>
-                            <div class="project-links">
-                                <a href="projects/dreamdecoding.html" class="btn btn-primary">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -483,9 +454,11 @@
                     <a href="index.html#contact">Contact</a>
                 </div>
             </div>
+            <p class="last-updated" data-last-updated="2025-10-21"></p>
         </div>
     </footer>
 
+    <script src="last-updated.js"></script>
     <script>
         // Typing animation for the description text
         function typeWriter(element, text, speed = 50) {
